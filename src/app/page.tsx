@@ -14,11 +14,14 @@ import Footer from "@/components/footer";
 import NewsletterModal from "@/components/newsletter-modal";
 import SpeakerModal from "@/components/speaker-modal";
 import SponsorModal from "@/components/sponsor-modal";
+import Volunteers from "@/components/volunteers";
+import VolunteerModal from "@/components/volunteer-modal";
 
 export default function Home() {
   const [newsletterOpen, setNewsletterOpen] = useState(false);
   const [speakerOpen, setSpeakerOpen] = useState(false);
   const [sponsorOpen, setSponsorOpen] = useState(false);
+  const [volunteerOpen, setVolunteerOpen] = useState(false);
 
   return (
     <>
@@ -31,10 +34,12 @@ export default function Home() {
       <Divider />
       <Sponsors onApply={() => setSponsorOpen(true)} />
       <Venue />
+      <Volunteers onApply={() => setVolunteerOpen(true)} />
       <Footer />
       <NewsletterModal open={newsletterOpen} onClose={() => setNewsletterOpen(false)} />
       <SpeakerModal open={speakerOpen} onClose={() => setSpeakerOpen(false)} />
       <SponsorModal open={sponsorOpen} onClose={() => setSponsorOpen(false)} />
+      <VolunteerModal open={volunteerOpen} onClose={() => setVolunteerOpen(false)} />
     </>
   );
 }
