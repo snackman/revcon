@@ -18,7 +18,7 @@ export default function Sponsors({ onApply }: { onApply: () => void }) {
           </h2>
           <p className="mx-auto max-w-xl text-lg text-zinc-400">
             Partner with <span className="text-accent-red">Rev</span><span className="text-white">Con</span>{" "}
-            to get your brand in front of 200+ revolutionary technologists
+            to get in front of 200+ revolutionary technologists
           </p>
         </motion.div>
 

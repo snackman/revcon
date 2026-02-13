@@ -69,7 +69,7 @@ export default function SponsorModal({
         <>
           <h3 className="mb-2 text-2xl font-bold">Become a Partner</h3>
           <p className="mb-6 text-sm text-zinc-400">
-            Get your brand in front of 200+ revolutionary technologists.
+            Get in front of 200+ revolutionary technologists.
           </p>
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <input
