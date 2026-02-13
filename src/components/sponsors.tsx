@@ -17,24 +17,9 @@ export default function Sponsors() {
             Sponsors
           </h2>
           <p className="mx-auto max-w-xl text-lg text-zinc-400">
-            Partner with <span className="text-accent-red">Rev</span><span className="text-white">Con</span> and put your brand in front of
-            Philadelphia&apos;s tech community
+            Partner with <span className="text-accent-red">Rev</span><span className="text-white">Con</span>{" "}
+            to put your brand in front of 200+ revolutionary technologists
           </p>
-        </motion.div>
-
-        <motion.div
-          {...fadeUp}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4"
-        >
-          {Array.from({ length: 4 }).map((_, i) => (
-            <div
-              key={i}
-              className="flex h-24 items-center justify-center rounded-xl border border-dashed border-card-border bg-card-bg/30 text-sm text-zinc-600"
-            >
-              Your Logo Here
-            </div>
-          ))}
         </motion.div>
 
         <motion.div
