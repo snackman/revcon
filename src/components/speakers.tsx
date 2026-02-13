@@ -16,7 +16,7 @@ const fadeUp = {
   viewport: { once: true, margin: "-100px" },
 };
 
-export default function Speakers() {
+export default function Speakers({ onApply }: { onApply: () => void }) {
   return (
     <section id="speakers" className="py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
@@ -59,12 +59,12 @@ export default function Speakers() {
           <p className="mb-4 text-zinc-400">
             Want to speak at <span className="text-accent-red">Rev</span><span className="text-white">Con</span>?
           </p>
-          <a
-            href="#signup"
+          <button
+            onClick={onApply}
             className="inline-block rounded-full border border-accent-red px-6 py-2 text-sm font-semibold text-accent-red transition-colors hover:bg-accent-red hover:text-white"
           >
             Apply to Speak
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

@@ -8,7 +8,7 @@ const fadeUp = {
   viewport: { once: true, margin: "-100px" },
 };
 
-export default function Signup() {
+export default function Signup({ onGetNotified }: { onGetNotified: () => void }) {
   return (
     <section id="signup" className="py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
@@ -25,23 +25,12 @@ export default function Signup() {
             the schedule goes live.
           </p>
 
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row"
+          <button
+            onClick={onGetNotified}
+            className="rounded-full bg-accent-red px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-accent-red-hover"
           >
-            <input
-              type="email"
-              placeholder="your@email.com"
-              required
-              className="flex-1 rounded-full border border-card-border bg-card-bg px-5 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-accent-red"
-            />
-            <button
-              type="submit"
-              className="rounded-full bg-accent-red px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-red-hover"
-            >
-              Notify Me
-            </button>
-          </form>
+            Get Notified
+          </button>
 
           <p className="mt-4 text-xs text-zinc-500">
             No spam. Unsubscribe anytime.

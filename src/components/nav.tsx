@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 
-export default function Nav() {
+export default function Nav({ onGetNotified }: { onGetNotified: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -37,12 +37,12 @@ export default function Nav() {
           ))}
         </div>
 
-        <a
-          href="#signup"
+        <button
+          onClick={onGetNotified}
           className="hidden rounded-full bg-accent-red px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-red-hover md:block"
         >
           Get Notified
-        </a>
+        </button>
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -66,13 +66,12 @@ export default function Nav() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#signup"
-              onClick={() => setMenuOpen(false)}
+            <button
+              onClick={() => { setMenuOpen(false); onGetNotified(); }}
               className="mt-2 rounded-full bg-accent-red px-5 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-red-hover"
             >
               Get Notified
-            </a>
+            </button>
           </div>
         </div>
       )}

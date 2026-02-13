@@ -1,13 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Divider() {
   return (
-    <section className="relative flex h-48 items-center justify-center overflow-hidden sm:h-64">
-      <div className="absolute inset-0 bg-gradient-to-r from-accent-red/10 via-card-bg to-accent-blue/10" />
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-red/40 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent-red/40 to-transparent" />
+    <section className="relative flex h-72 items-center justify-center overflow-hidden sm:h-96">
+      <Image
+        src="/images/liberty-bell.jpg"
+        alt="The Liberty Bell, Philadelphia"
+        fill
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-accent-red/20 to-accent-blue/10" />
 
       <motion.blockquote
         initial={{ opacity: 0, scale: 0.95 }}

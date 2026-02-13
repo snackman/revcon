@@ -4,10 +4,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { EVENT } from "@/lib/constants";
 
-export default function Hero() {
+export default function Hero({ onGetNotified }: { onGetNotified: () => void }) {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background image */}
       <Image
         src="/images/independence-hall.jpg"
         alt="Independence Hall, Philadelphia"
@@ -15,9 +14,7 @@ export default function Hero() {
         priority
         className="object-cover"
       />
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70" />
-      {/* Gradient accents on top */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(220,38,38,0.2)_0%,_transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(59,130,246,0.1)_0%,_transparent_50%)]" />
@@ -58,12 +55,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <a
-            href="#signup"
+          <button
+            onClick={onGetNotified}
             className="inline-block rounded-full bg-accent-red px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-accent-red-hover"
           >
             Get Notified
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>
