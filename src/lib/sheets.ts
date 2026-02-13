@@ -45,3 +45,22 @@ export async function appendSpeaker(data: {
     },
   });
 }
+
+export async function appendSponsor(data: {
+  company: string;
+  name: string;
+  email: string;
+  message: string;
+}) {
+  const auth = getAuth();
+  const sheets = google.sheets({ version: "v4", auth });
+
+  await sheets.spreadsheets.values.append({
+    spreadsheetId: SPREADSHEET_ID,
+    range: "Sponsors!A:E",
+    valueInputOption: "USER_ENTERED",
+    requestBody: {
+      values: [[data.company, data.name, data.email, data.message, new Date().toISOString()]],
+    },
+  });
+}
