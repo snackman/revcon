@@ -40,8 +40,7 @@ export default function About() {
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-zinc-400">
             Revolution Conference is Philadelphia&apos;s premier gathering for
-            technologists who believe the next great revolution will be built
-            with code. One day. Four tracks. Unlimited potential.
+            technologists who are exploring revolutionary ideas.
           </p>
         </motion.div>
 

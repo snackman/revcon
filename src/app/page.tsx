@@ -2,6 +2,7 @@ import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import About from "@/components/about";
 import Topics from "@/components/topics";
+import Divider from "@/components/divider";
 import Speakers from "@/components/speakers";
 import Venue from "@/components/venue";
 import Signup from "@/components/signup";
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <About />
       <Topics />
+      <Divider />
       <Speakers />
       <Venue />
       <Signup />

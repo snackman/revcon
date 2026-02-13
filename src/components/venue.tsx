@@ -31,8 +31,8 @@ export default function Venue() {
         >
           <div className="relative h-64 sm:h-80">
             <Image
-              src="/images/independence-hall.jpg"
-              alt="Independence Hall, Philadelphia"
+              src="/images/philly-skyline.jpg"
+              alt="Philadelphia skyline"
               fill
               className="object-cover"
             />
@@ -45,16 +45,10 @@ export default function Venue() {
               built with code, circuits, and bold ideas.
             </p>
             <p className="mb-8 text-zinc-400">
-              Specific venue and travel details will be announced soon. <span className="text-accent-red">Rev</span><span className="text-white">Con</span>
+              Specific venue and travel details will be announced soon. <span className="text-accent-red">Rev</span><span className="text-white">Con</span>{" "}
               will be centrally located in Philadelphia with easy access to public
               transit, hotels, and the city&apos;s thriving tech scene.
             </p>
-            <a
-              href="#signup"
-              className="inline-block rounded-full border border-zinc-700 px-6 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:border-accent-red hover:text-white"
-            >
-              Get Venue Updates
-            </a>
           </div>
         </motion.div>
       </div>

@@ -1,7 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { User } from "lucide-react";
+
+const FIGURES = [
+  { name: "Benjamin Franklin", role: "Inventor & Statesman", image: "/images/ben-franklin.jpg" },
+  { name: "Betsy Ross", role: "Flag Maker & Revolutionary", image: "/images/betsy-ross.jpg" },
+  { name: "Thomas Jefferson", role: "Author & Visionary", image: "/images/thomas-jefferson.jpg" },
+  { name: "Thomas Paine", role: "Writer & Revolutionary", image: "/images/thomas-paine.jpg" },
+];
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -23,18 +30,23 @@ export default function Speakers() {
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {Array.from({ length: 4 }).map((_, i) => (
+          {FIGURES.map((figure, i) => (
             <motion.div
-              key={i}
+              key={figure.name}
               {...fadeUp}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="flex flex-col items-center rounded-2xl border border-dashed border-card-border bg-card-bg/50 p-8"
             >
-              <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-zinc-800">
-                <User className="h-10 w-10 text-zinc-600" />
+              <div className="relative mb-4 h-24 w-24 overflow-hidden rounded-full border border-card-border">
+                <Image
+                  src={figure.image}
+                  alt={figure.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div className="mb-1 h-4 w-24 rounded bg-zinc-800" />
-              <div className="h-3 w-16 rounded bg-zinc-800/60" />
+              <p className="mb-1 text-sm font-semibold text-zinc-300">{figure.name}</p>
+              <p className="text-xs text-zinc-500">{figure.role}</p>
             </motion.div>
           ))}
         </div>
@@ -45,13 +57,13 @@ export default function Speakers() {
           className="mt-12 text-center"
         >
           <p className="mb-4 text-zinc-400">
-            Want to speak at <span className="text-accent-red">Rev</span><span className="text-white">Con</span>? Applications open soon.
+            Want to speak at <span className="text-accent-red">Rev</span><span className="text-white">Con</span>?
           </p>
           <a
             href="#signup"
             className="inline-block rounded-full border border-accent-red px-6 py-2 text-sm font-semibold text-accent-red transition-colors hover:bg-accent-red hover:text-white"
           >
-            Get Notified When Applications Open
+            Apply to Speak
           </a>
         </motion.div>
       </div>
