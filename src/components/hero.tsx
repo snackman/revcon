@@ -1,24 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { EVENT } from "@/lib/constants";
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Gradient background */}
+      {/* Background image */}
+      <Image
+        src="/images/independence-hall.jpg"
+        alt="Independence Hall, Philadelphia"
+        fill
+        priority
+        className="object-cover"
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/70" />
+      {/* Gradient accents on top */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(220,38,38,0.15)_0%,_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(220,38,38,0.2)_0%,_transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(59,130,246,0.1)_0%,_transparent_50%)]" />
-        {/* Grid overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-            backgroundSize: "64px 64px",
-          }}
-        />
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
@@ -46,7 +48,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mx-auto mb-10 max-w-xl text-lg text-zinc-400 sm:text-xl"
+          className="mx-auto mb-10 max-w-xl text-lg text-zinc-300 sm:text-xl"
         >
           {EVENT.tagline}
         </motion.p>

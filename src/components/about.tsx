@@ -36,7 +36,7 @@ export default function About() {
       <div className="mx-auto max-w-6xl px-6">
         <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            What is <span className="text-accent-red">RevCon</span>?
+            What is <span className="text-accent-red">Rev</span>Con?
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-zinc-400">
             Revolution Conference is Philadelphia&apos;s premier gathering for

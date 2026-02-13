@@ -1,8 +1,8 @@
 export const EVENT = {
   name: "Revolution Conference",
   shortName: "RevCon",
-  tagline: "Revolutionary tech in the city of the revolution",
-  date: "2025",
+  tagline: "Revolutionary tech in the city of the revolution. Coming Fall 2026.",
+  date: "Fall 2026",
   location: "Philadelphia, PA",
   description:
     "Philadelphia's premier tech conference bringing together innovators in AI, Blockchain, Medicine, and Robotics.",

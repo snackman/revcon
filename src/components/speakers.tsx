@@ -45,7 +45,7 @@ export default function Speakers() {
           className="mt-12 text-center"
         >
           <p className="mb-4 text-zinc-400">
-            Want to speak at RevCon? Applications open soon.
+            Want to speak at <span className="text-accent-red">Rev</span><span className="text-white">Con</span>? Applications open soon.
           </p>
           <a
             href="#signup"

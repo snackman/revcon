@@ -17,7 +17,7 @@ export default function Sponsors() {
             Sponsors
           </h2>
           <p className="mx-auto max-w-xl text-lg text-zinc-400">
-            Partner with RevCon and put your brand in front of
+            Partner with <span className="text-accent-red">Rev</span><span className="text-white">Con</span> and put your brand in front of
             Philadelphia&apos;s tech community
           </p>
         </motion.div>
