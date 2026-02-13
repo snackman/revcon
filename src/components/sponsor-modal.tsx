@@ -54,7 +54,7 @@ export default function SponsorModal({
         <div className="text-center">
           <h3 className="mb-2 text-2xl font-bold">Thanks for Your Interest!</h3>
           <p className="mb-6 text-zinc-400">
-            We&apos;ll reach out with sponsorship details for{" "}
+            We&apos;ll reach out with partnership details for{" "}
             <span className="text-accent-red">Rev</span>
             <span className="text-white">Con</span>.
           </p>
@@ -67,9 +67,9 @@ export default function SponsorModal({
         </div>
       ) : (
         <>
-          <h3 className="mb-2 text-2xl font-bold">Become a Sponsor</h3>
+          <h3 className="mb-2 text-2xl font-bold">Become a Partner</h3>
           <p className="mb-6 text-sm text-zinc-400">
-            Put your brand in front of 200+ revolutionary technologists.
+            Get your brand in front of 200+ revolutionary technologists.
           </p>
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <input
