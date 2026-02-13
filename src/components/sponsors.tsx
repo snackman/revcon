@@ -8,7 +8,7 @@ const fadeUp = {
   viewport: { once: true, margin: "-100px" },
 };
 
-export default function Sponsors() {
+export default function Sponsors({ onApply }: { onApply: () => void }) {
   return (
     <section id="sponsors" className="py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
@@ -27,12 +27,12 @@ export default function Sponsors() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center"
         >
-          <a
-            href="mailto:sponsors@revcon.dev"
+          <button
+            onClick={onApply}
             className="inline-block rounded-full bg-accent-red px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-red-hover"
           >
             Become a Sponsor
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

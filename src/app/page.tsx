@@ -13,10 +13,12 @@ import Venue from "@/components/venue";
 import Footer from "@/components/footer";
 import NewsletterModal from "@/components/newsletter-modal";
 import SpeakerModal from "@/components/speaker-modal";
+import SponsorModal from "@/components/sponsor-modal";
 
 export default function Home() {
   const [newsletterOpen, setNewsletterOpen] = useState(false);
   const [speakerOpen, setSpeakerOpen] = useState(false);
+  const [sponsorOpen, setSponsorOpen] = useState(false);
 
   return (
     <>
@@ -27,11 +29,12 @@ export default function Home() {
       <Signup onGetNotified={() => setNewsletterOpen(true)} />
       <Speakers onApply={() => setSpeakerOpen(true)} />
       <Divider />
-      <Sponsors />
+      <Sponsors onApply={() => setSponsorOpen(true)} />
       <Venue />
       <Footer />
       <NewsletterModal open={newsletterOpen} onClose={() => setNewsletterOpen(false)} />
       <SpeakerModal open={speakerOpen} onClose={() => setSpeakerOpen(false)} />
+      <SponsorModal open={sponsorOpen} onClose={() => setSponsorOpen(false)} />
     </>
   );
 }
